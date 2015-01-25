@@ -1,8 +1,9 @@
-CC = g++
-CFLAGS = `paragui-config --cflags` ` pkg-config --cflags sigc++-1.2`
-LIBS = `paragui-config --libs` `pkg-config --libs sigc++-1.2`
+CFLAGS = `sdl-config --cflags` 
+LIBS = `sdl-config --libs`
 OPTS =  -Wall
 
 main : main.c
-	${CC} ${OPTS} -o drumset main.c ${CFLAGS} ${LIBS}
-	
+	${CXX} ${OPTS} -o dset main.c ${CFLAGS} ${LIBS}
+
+clean : dset 
+	rm dset	
